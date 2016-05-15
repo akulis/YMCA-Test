@@ -1,11 +1,19 @@
 <section class="jumbotron" ng-class="{'active': isActive('catalog')}" ng-show="user.Company.LogoUrl">
+    <customcarousel></customcarousel>
     <div class="container">
-        <h2 class="thumbnail" ng-show="Four51User.isAuthenticated()">
-            <a href="catalog">
-                <img ng-src="{{user.Company.LogoUrl}}" />
-            </a>
-            <span>{{user.Company.Name}}</span>
-            <homemessage />
-        </h2>
+        <div class="row jumboHeaderText"> <!-- pull-left if left allignment wanted again-->
+            <div ng-show="Four51User.isAuthenticated()">
+                <a ng-click="refreshUser()" href="catalog">
+                    <!-- Insert image file here -->
+                    <img src="images/Top-Color-Tag.png" width="100%" alt="Add text that describes image for visually impaired or text browsers"/>
+                </a>
+                <h2 class="thumbnail">
+                    <!-- <span class="jumboHeaderText">
+                    {{user.Company.Name}}
+                </span> -->
+                </h2>
+                <homemessage />
+            </div>
+        </div>
     </div>
 </section>
