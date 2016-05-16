@@ -156,9 +156,10 @@
                 </div>
                 <div class="panel-footer">
                     <div class="row">
-                        <div class="col-md-4 col-lg-3">
+                        <!-- Comment out to move Gift Card field to Checkout Page (ordersummary.html) $ak -->
+                        <!-- <div class="col-md-4 col-lg-3">
                             <giftcardredemption ng-if="user.Permissions.contains('ViewPromotions')" />
-                        </div>
+                        </div> -->
                         <div class="col-md-3 col-md-offset-5 col-lg-4 text-right" ng-if="!(user.Permissions.contains('HidePricing'))">
                             <h4 class="text-primary">
                                 <strong>{{'Subtotal' | r | xlat}} <span class="text-success">{{currentOrder.Subtotal | culturecurrency}}</span></strong>
@@ -214,4 +215,7 @@
         </form>
     </div>
     <cartprint class="visible-print" />
+    <div class="row pull-right">
+       <a class="btn btn-primary" href="catalog" ng-click="saveChanges()">Continue Shopping</a>
+   </div>
 </section>
