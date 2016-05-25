@@ -5056,7 +5056,7 @@ a.list-group-item-danger.active:focus {
 .panel-search > .panel-heading,
 .panel-category-list ul li a .empty > .panel-heading,
 .panel-order > .panel-heading {
-    border-radius: 25px; /* add for rounded borders $ak */
+    /*border-radius: 25px; /* add for rounded borders $ak */
   color: #333333;
   background-color: #f5f5f5;
   border-color: #dddddd;
