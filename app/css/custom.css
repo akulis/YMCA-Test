@@ -364,6 +364,7 @@ h2 .jumbotron {
   color: #333333;
 }
 .panel {
+    border-radius: 25px;
   background-color: #FFFFFF;
 }
 .panel-footer {
