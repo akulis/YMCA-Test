@@ -346,7 +346,8 @@ body a {
 }
 .jumbotron {
     border-radius: 25px; /* add for rounded borders $ak */
-    margin: 0px 15px 0px 15px;
+    padding-left: 25px;
+    padding-right: 25px;
     background-color: #fcaf17;
 }
 h2 .jumbotron {
