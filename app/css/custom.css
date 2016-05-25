@@ -166,7 +166,7 @@
 .socialFooter {
     margin-top: 0px;
     clear: both;
-    background-color: #000000;
+    background-color: #dd5828;
     height: 60px;
     width: 100%;
     bottom: 0;
@@ -243,7 +243,7 @@
   color: #FFFFFF;
 }
 .navbar-default {
-  background-color: #000000; /*0B3648*/
+  background-color: #006b6b; /*0B3648*/
 }
 .container .navbar-nav li a {
   color: #FFFFFF;
@@ -345,7 +345,7 @@ body a {
   background-color: #D2322D;
 }
 .jumbotron {
-  background-color: #FFFFFF;
+  background-color: #fcaf17;
 }
 h2 .jumbotron {
   color: #FFFFFF;
