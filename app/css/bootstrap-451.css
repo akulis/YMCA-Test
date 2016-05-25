@@ -6542,12 +6542,11 @@ button::-moz-focus-inner {
 .pagination li a {
   float: none;
 }
-/*Edit Jumbrotron width - $ak */
-.jumbotron {
+/*Edit Jumbrotron in custom.css - $ak */
+/*.jumbotron {
   margin: 45px 5px -45px;
-  /* margin: 45px 5px -45px; */
   display: none;
-}
+}*/
 .jumbotron.active {
   display: block;
 }
