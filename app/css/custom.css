@@ -345,8 +345,8 @@ body a {
   background-color: #D2322D;
 }
 .jumbotron {
-  background-color: #fcaf17;
-  border-color: #D43F3A;
+    border-radius: 25px;
+    background-color: #fcaf17;
 }
 h2 .jumbotron {
   color: #FFFFFF;
