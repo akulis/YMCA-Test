@@ -9,6 +9,7 @@ body {
   margin: 0;
   height: 100%; /* Added this to make sticky footer - $ak */
 }
+
 article,
 aside,
 details,
@@ -267,11 +268,11 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: 'Droid Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
-  background-color: #f0f0f0;
+  background-color: #f7f7f7;
 }
 input,
 button,
@@ -287,7 +288,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #000000;
+  color: #2B2B2B;
   text-decoration: underline;
 }
 a:focus {
@@ -1436,7 +1437,7 @@ th {
   border-top: 2px solid #dddddd;
 }
 .table .table {
-  background-color: #f0f0f0;
+  background-color: #f7f7f7;
 }
 .table-condensed > thead > tr > th,
 .table-condensed > tbody > tr > th,
@@ -2304,7 +2305,7 @@ fieldset[disabled] .btn-link {
 }
 .btn-link:hover,
 .btn-link:focus {
-  color: #000000;
+  color: #2B2B2B;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -3123,7 +3124,7 @@ input[type="button"].btn-block {
 .navbar-fixed-bottom .dropdown .caret,
 .navbar-fixed-bottom .dropdown-mega .caret {
   border-top: 0;
-  border-bottom: 4px solid;
+  /*border-bottom: 4px solid;*/
   content: "";
 }
 .dropup .dropdown-menu,
@@ -3465,6 +3466,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .input-group-btn:last-child > .btn-group {
   margin-left: -1px;
 }
+
+/*Navbar*/
 .nav {
   margin-bottom: 0;
   padding-left: 0;
@@ -3529,7 +3532,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
   color: #555555;
-  background-color: #f0f0f0;
+  background-color: #f7f7f7;
   border: 1px solid #dddddd;
   border-bottom-color: transparent;
   cursor: default;
@@ -3577,7 +3580,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .nav-tabs.nav-justified > .active > a,
   .nav-tabs.nav-justified > .active > a:hover,
   .nav-tabs.nav-justified > .active > a:focus {
-    border-bottom-color: #f0f0f0;
+    border-bottom-color: #f7f7f7;
   }
 }
 .nav-pills > li {
@@ -3647,7 +3650,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .nav-tabs-justified > .active > a,
   .nav-tabs-justified > .active > a:hover,
   .nav-tabs-justified > .active > a:focus {
-    border-bottom-color: #f0f0f0;
+    border-bottom-color: #f7f7f7;
   }
 }
 .tab-content > .tab-pane {
@@ -3662,11 +3665,15 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
+
+/* Adjust Navbar Margin and Border*/
 .navbar {
   position: relative;
   min-height: 60px;
+  /*margin-left: 50px;
+  margin-right: 50px;*/
   margin-bottom: 0;
-  /*border: 1px solid transparent;*/
+  /*border: 0px solid transparent;*/
 }
 @media (min-width: 768px) {
   .navbar {
@@ -4172,7 +4179,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding: 8px 15px;
   margin-bottom: 20px;
   list-style: none;
-  background-color: #f0f0f0;
+  background-color: #f7f7f7;
   border-radius: 4px;
 }
 .breadcrumb > li {
@@ -4222,7 +4229,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .pagination > li > span:hover,
 .pagination > li > a:focus,
 .pagination > li > span:focus {
-  color: #000000;
+  color: #2B2B2B;
   background-color: #eeeeee;
   border-color: #dddddd;
 }
@@ -4396,7 +4403,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   white-space: nowrap;
   text-align: center;
   /* Change Shopping Cart Indicator Background - $ak */
-  background-color: #000000;
+  background-color: #0B3648;
   border-radius: 10px;
 }
 .badge:empty {
@@ -5049,6 +5056,7 @@ a.list-group-item-danger.active:focus {
 .panel-search > .panel-heading,
 .panel-category-list ul li a .empty > .panel-heading,
 .panel-order > .panel-heading {
+    border-radius: 25px; /* add for rounded borders $ak */
   color: #333333;
   background-color: #f5f5f5;
   border-color: #dddddd;
@@ -5200,7 +5208,7 @@ a.list-group-item-danger.active:focus {
   padding: 19px;
   margin-bottom: 20px;
   background-color: #ffffff;
-  border: 1px solid #f0f0f0;
+  border: 1px solid #f7f7f7;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -5880,7 +5888,9 @@ ul:after,
 .visible-lg {
   display: none !important;
 }
+
 /* Updated the min-width to work with .visible-xxs - $ak */
+
 @media (max-width: 719px) {
   .visible-xxs {
     display: block !important;
@@ -5896,6 +5906,7 @@ ul:after,
     display: table-cell !important;
   }
 }
+
 @media (min-width: 720px) and (max-width: 767px) {
   .visible-xs {
     display: block !important;
@@ -6381,9 +6392,11 @@ button::-moz-focus-inner {
   animation-duration: 1s;
   -ms-animation-duration: 1s;
 }
+
+/* Change Back Left Arrow Color */
 .navbar .container .navbar-nav.pull-left li.fadeInLeft a i,
 .navbar .container-view .navbar-nav.pull-left li.fadeInLeft a i {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 .navbar .container .navbar-nav.pull-left li a,
 .navbar .container-view .navbar-nav.pull-left li a {
@@ -6405,10 +6418,12 @@ button::-moz-focus-inner {
 .navbar .container-view .navbar-nav.pull-right li a {
   padding: 20px 10px;
 }
+
+/* Remove Border Radius and Border for Shopping Cart Icon, Add to Custom CSS for Shopping Cart Only. This is to avoid having circles around social media icons -$ak */
 .navbar .container .navbar-nav.pull-right li a i:first-of-type,
 .navbar .container-view .navbar-nav.pull-right li a i:first-of-type {
-  border-radius: 50%;
-  border: 1px solid #fff;
+  /*border-radius: 50%;
+  border: 1px solid #fff;*/
   text-align: center;
   padding: 10px;
   margin-top: -10px;
@@ -8100,6 +8115,8 @@ select.ng-invalid:invalid:invalid:focus {
 .panel-product-list ul li.minimal .panel-order-shipping-multiple > div:first-of-type > p:first-of-type {
   display: none;
 }
+
+/* Adjust Product List Link Here - $ak*/
 .panel-product-list ul li a {
   padding: .75em;
   display: block;
