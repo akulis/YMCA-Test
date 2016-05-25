@@ -5056,7 +5056,7 @@ a.list-group-item-danger.active:focus {
 .panel-search > .panel-heading,
 .panel-category-list ul li a .empty > .panel-heading,
 .panel-order > .panel-heading {
-    
+
   color: #333333;
   background-color: #f5f5f5;
   border-color: #dddddd;
@@ -6544,7 +6544,7 @@ button::-moz-focus-inner {
 }
 /*Edit Jumbrotron width - $ak */
 .jumbotron {
-  margin: 45px 0px -45px;
+  margin: 45px 5px -45px;
   /* margin: 45px 5px -45px; */
   display: none;
 }
