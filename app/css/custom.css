@@ -345,26 +345,30 @@ body a {
   background-color: #D2322D;
 }
 .jumbotron {
-    border-radius: 25px;
+    border-radius: 25px; /* add for rounded borders $ak */
     background-color: #fcaf17;
 }
 h2 .jumbotron {
   color: #FFFFFF;
 }
 .panel-primary .panel-heading .panel-title {
+    border-radius: 25px; /* add for rounded borders $ak */
   background-color: #F18F01; /*002A45*/
 }
 .panel-primary .panel-heading .panel-title {
+    border-radius: 25px; /* add for rounded borders $ak */
   color: #FFFFFF;
 }
 .panel-default .panel-heading .panel-title {
+    border-radius: 25px; /* add for rounded borders $ak */
   background-color: #F5F5F5;
 }
 .panel-default .panel-heading .panel-title {
+    border-radius: 25px; /* add for rounded borders $ak */
   color: #333333;
 }
 .panel {
-    border-radius: 25px;
+    border-radius: 25px; /* add for rounded borders $ak */
   background-color: #FFFFFF;
 }
 .panel-footer {
