@@ -351,25 +351,19 @@ body a {
 h2 .jumbotron {
   color: #FFFFFF;
 }
-.panel-default {
-    border-radius: 25px; /* add for rounded borders $ak */
-}
+.panel-default {}
 
 .panel-primary .panel-heading .panel-title {
-    border-radius: 25px; /* add for rounded borders $ak */
-  background-color: #F18F01; /*002A45*/
+    background-color: #F18F01; /*002A45*/
 }
 .panel-primary .panel-heading .panel-title {
-    border-radius: 25px; /* add for rounded borders $ak */
-  color: #FFFFFF;
+    color: #FFFFFF;
 }
 .panel-default .panel-heading .panel-title {
-    border-radius: 25px; /* add for rounded borders $ak */
-  background-color: #F5F5F5;
+    background-color: #F5F5F5;
 }
 .panel-default .panel-heading .panel-title {
-    border-radius: 25px; /* add for rounded borders $ak */
-  color: #333333;
+    color: #333333;
 }
 .panel {
     border-radius: 25px; /* add for rounded borders $ak */
