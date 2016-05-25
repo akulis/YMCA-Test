@@ -5204,6 +5204,7 @@ a.list-group-item-danger.active:focus {
   border-bottom-color: #ebccd1;
 }
 .well {
+    border-radius: 25px; /* add for rounded borders $ak */
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
