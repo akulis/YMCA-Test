@@ -43,6 +43,9 @@
 .panel-product-list ul li h3 {
     font-size: 15px;
 }
+.panel-body h2 h5 ul li {
+    list-style-type: none;
+}
 
 /* This counters the spacing issue on the product list page with <a> links */
 .aLinkSpacingFix p a {
