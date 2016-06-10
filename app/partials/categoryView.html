@@ -31,12 +31,14 @@
             </li>
         </ul>
     </nav>
-    <div class="row text-white">
+    <div class="row">
         <aside class="col-md-3 visible-md visible-lg" ng-if="navStatus.visible">
             <div class="panel panel-default panel-nav">
                 <div class="panel-heading panel-top-rounded">
                     <h3 class="panel-title">
-                        {{'Category List' | r | xlat}}
+                        <div class="text-white">
+                            {{'Category List' | r | xlat}}
+                        </div>
                     </h3>
                 </div>
                 <nav class="nav 451qa_sidenav panel-body">
