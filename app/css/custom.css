@@ -398,12 +398,15 @@ h2 .jumbotron {
   border-color: #F7F7F7;
 }
 
-/* Commenting out product list view background $ak */
+/* Adjust product list border/backgrounds $ak */
+.panel-product-list {
+    border: no-panels;
+}
 .panel-product-list .well {
   background-color: transparent;
 }
 .panel-product-list .well {
-  color: transparent;
+  color: #333333;
 }
 .panel-product-list .well {
   border-color: transparent;
