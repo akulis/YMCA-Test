@@ -370,7 +370,7 @@ h2 .jumbotron {
     color: #FFFFFF;
 }
 .panel-default .panel-heading .panel-title {
-    background-color: #0060af;
+    background-color: #cdcdcd;
 }
 .panel-default .panel-heading .panel-title {
     color: #333333;
@@ -385,9 +385,6 @@ h2 .jumbotron {
     border-radius: 25px; /* add for rounded borders $ak */
     background-color: #FFFFFF;
 }
-/*.panel-top-rounded {
-    border-radius: 25px 25px 0px 0px; /* add for rounded borders $ak */
-/*} */
 .panel-footer {
   background-color: #F5F5F5;
 }
@@ -400,7 +397,9 @@ h2 .jumbotron {
 .panel-category-list .well {
   border-color: #F7F7F7;
 }
-.panel-product-list .well {
+
+/* Commenting out product list view background $ak */
+/* .panel-product-list .well {
   background-color: #FFFFFF;
 }
 .panel-product-list .well {
@@ -408,4 +407,4 @@ h2 .jumbotron {
 }
 .panel-product-list .well {
   border-color: #F7F7F7;
-}
+} 8? 
