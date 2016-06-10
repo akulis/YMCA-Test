@@ -400,7 +400,7 @@ h2 .jumbotron {
 
 /* Adjust product list border/backgrounds $ak */
 .panel-product-list {
-    border: no-panels;
+    border-radius: 0px;
 }
 .panel-product-list .well {
   background-color: transparent;
