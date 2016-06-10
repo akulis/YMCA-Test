@@ -8,7 +8,9 @@
     top: 50%;
     transform: translateY(-50%);*/
 }
-
+.text-white {
+    color: #ffffff;
+}
 /* Navbar Icon */
 .NavbarIconContainer {
     max-width: 100%;
@@ -368,12 +370,15 @@ h2 .jumbotron {
     color: #FFFFFF;
 }
 .panel-default .panel-heading .panel-title {
-    background-color: #F5F5F5;
+    background-color: #0060af;
 }
 .panel-default .panel-heading .panel-title {
     color: #333333;
 }
 .panel-heading {
+    border-radius: 25px 25px 0px 0px; /* add for rounded borders $ak */
+}
+.panel-title {
     border-radius: 25px 25px 0px 0px; /* add for rounded borders $ak */
 }
 .panel {
