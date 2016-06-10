@@ -412,3 +412,8 @@ h2 .jumbotron {
 .panel-product-list .well {
   border-color: transparent;
 }
+.thumbnail img {
+  max-height: 150px;
+  max-width: 100%;
+  margin: 0 auto 15px;
+}
