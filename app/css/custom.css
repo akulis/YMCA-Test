@@ -375,7 +375,10 @@ h2 .jumbotron {
 }
 .panel {
     border-radius: 25px; /* add for rounded borders $ak */
-  background-color: #FFFFFF;
+    background-color: #FFFFFF;
+}
+.panel-top-rounded {
+    border-radius: 25px 25px 0px 0px; /* add for rounded borders $ak */
 }
 .panel-footer {
   background-color: #F5F5F5;
