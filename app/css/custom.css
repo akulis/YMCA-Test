@@ -399,12 +399,12 @@ h2 .jumbotron {
 }
 
 /* Commenting out product list view background $ak */
-/* .panel-product-list .well {
-  background-color: #FFFFFF;
+.panel-product-list .well {
+  background-color: transparent;
 }
 .panel-product-list .well {
-  color: #333333;
+  color: transparent;
 }
 .panel-product-list .well {
-  border-color: #F7F7F7;
-} 8? 
+  border-color: transparent;
+}
