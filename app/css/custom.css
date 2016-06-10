@@ -84,6 +84,9 @@
     bottom: 0;
     padding: 25px 0px;
 }
+.TopFooter a {
+    color: #ffffff;
+}
 .TopxsFooter {
     margin-top: 0px;
     clear: both;
@@ -270,7 +273,7 @@ body {
   color: #31708F;
 }
 body a {
-  color: #E04F4F;
+  color: #ed1c24;
 }
 .btn-primary {
   background-color: #0B3648;
