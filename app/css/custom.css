@@ -44,7 +44,7 @@
     font-size: 15px;
 }
 /* List Contact Us no bullets */
-.panel-body h4 p ul li {
+.panel-body h3 p ul li {
     list-style-type: none;
 }
 
