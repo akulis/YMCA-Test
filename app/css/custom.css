@@ -411,7 +411,7 @@ h2 .jumbotron {
     border-radius: 25px 25px 0px 0px; /* add for rounded borders $ak */
 }
 .roundBorders {
-    border-radius: 25px; /* add for rounded borders $ak */
+    border-radius: 25px 25px 0px 0px; /* add for rounded borders $ak */
 }
 .order-search-view .panel {
     border-radius: 25px; /* add for rounded borders $ak */
