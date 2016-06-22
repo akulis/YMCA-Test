@@ -405,16 +405,16 @@ h2 .jumbotron {
   background-color: #F5F5F5;
 }
 .address-list-view .panel {
-    border-radius: 25px 25px 0px 0px; /* add for rounded borders $ak */
+    border-radius: 25px; /* add for rounded borders $ak */
 }
 .ng-pristine .panel {
-    border-radius: 25px 25px 0px 0px; /* add for rounded borders $ak */
+    border-radius: 25px; /* add for rounded borders $ak */
 }
 .ng-scope .panel {
-    border-radius: 25px 25px 0px 0px; /* add for rounded borders $ak */
+    border-radius: 25px; /* add for rounded borders $ak */
 }
 .order-search-view .panel {
-    border-radius: 25px 25px 0px 0px; /* add for rounded borders $ak */
+    border-radius: 25px; /* add for rounded borders $ak */
 }
 .panel-category-list .well {
   background-color: #FFFFFF;
