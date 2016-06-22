@@ -407,7 +407,7 @@ h2 .jumbotron {
 .address-list-view .panel {
     border-radius: 25px 25px 0px 0px; /* add for rounded borders $ak */
 }
-.nav .ng-pristine .panel {
+.ng-pristine .panel {
     border-radius: 25px 25px 0px 0px; /* add for rounded borders $ak */
 }
 .panel-category-list .well {
