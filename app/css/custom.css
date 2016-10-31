@@ -192,16 +192,11 @@
     float: right;
     font-size: 1.8vw;
 }
-.leftFooterText {
-    font-size: 35pt !important;
-    font-style: oblique !important;
-    color: #ffffff !important;
-}
 .socialFooter {
     margin-top: 0px;
     clear: both;
     background-color: #dd5828;
-    height: 120px;
+    height: 60px;
     width: 100%;
     bottom: 0;
     padding: 10px 25px 0px 0px;
