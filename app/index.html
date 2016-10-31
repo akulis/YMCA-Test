@@ -1,268 +1,440 @@
-<!doctype html>
-<html lang="en" ng-app="451order" ng-controller="Four51Ctrl">
-    <head>
-        <!-- Set sub-folder here if different than base -->
-        <base href="/shop/"/>
-        <!-- Set four51IsAnonUser to true if anonymous or false if password is needed -->
-    	<script>var four51IsAnonUser = true;</script>
-        <!-- Set Window/Tab title here -->
-        <title>YMCA Apparel Store</title>
-        <!-- Meta tags -->
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <!-- Set search description here, NO KEYWORDS, this is what shows up in Google. Make no longer than 150-160 characters. -->
-        <!-- <meta name="description" content="Site Description Here" /> Commented out unless needed-->
-        <!-- Favicon -->
-        <link rel="shortcut icon" href="images/favicon-blue.ico" />
-        <!-- Links to style files, fonts, etc. -->
-    	<link rel="stylesheet" href="css/bootstrap-451.css" data-group="source" />
-    	<link rel="stylesheet" href="css/editor.css" data-group="source" />
-    	<link rel="stylesheet" href="css/theme.css" data-group="source" />
-    	<link rel="stylesheet" href="css/custom.css" data-group="source" />
-        <link href='//fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css' />
-        <link href='//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css' />
-        <link rel="stylesheet" href="css/animate.min.css" />
-        <!--[if lt IE 9]>
-        <div style="position:absolute; top:0; left:0; right:0; bottom:0; background-position:center center; background-size:cover; background-repeat:no-repeat;"></div>
-        <div style="margin:50px auto 0; max-width:600px; text-align: center; padding:20px; border:3px solid#f58220;font-family: Arial, Helvetica, sans-serif;">
-            <h1 style="color:#f58220; padding:20px;">This site uses advanced technology that requires a modern browser.</h1>
-            <p style="color:#000; font-size:16px;">We recommend that you update your browser to the current release of Internet Explorer, Firefox or Chrome. Beta versions of these browsers may work, but are not formally supported. <br/>
-                <a style="color:#f58220; font-size:16px;" target="_blank" href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">Click here to find your upgrade link <i class="fa fa-external-link-square"></i>
-                </a>
-            </p>
-            <p style="color:#000;">
-                <small>
-                    <em>*Site works best with most recent versions of <a style="color:#f58220;" target="_blank" href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">Internet Explorer</a>, <a style="color:#f58220;" target="_blank" href="//www.mozilla.org/en-US/firefox/new/" target="_blank">FireFox</a> and <a style="color:#f58220;"href="//www.google.com/chrome/browser/" target="_blank">Chrome</a>
-                    </em>
-                </small>
-            </p>
-        </div>
-        <!--<![endif]-->
-    </head>
-<!--[if (gte IE 9)|!(IE)]><!-->
-<body ng-cloak ng-class="ng-cloak">
-    <div class="TopWrapper">
-        <section>
-            <section ng-hide="Four51User.isAuthenticated() || isAnon" class="container">
-                <login />
-            </section>
-            <section ng-if="Four51User.isAuthenticated()" id="content">
-                <section class="hidden-print">
-                    <navigation />
-                </section>
-                <section class="hidden-print">
-                    <branding />
-                </section>
-                <section class="container-view">
-                    <ng-view autoscroll />
-                </section>
-            </section>
-        </section>
-        <div class="push"></div>
-        <footer>
-            <div class="TopFooter visible-sm visible-md visible-lg">
-                <div class="footLeft">
-                    <img src="images/YMCA-area-focus-white-75.png" alt="For Youth Development. For Healthy Living. For Social Responsibilty." width="100%" />
-                </div>
-                <div class="footRight">
-                    <p>Contact Us</p>
-                    <p><i class="fa fa-phone"></i>   1-877-742-5686</p>
-                    <p><i class="fa fa-envelope"></i>   <a href="mailto:ymcastore@toppromotions.com?subject=YMCA%20Apparel%20Store%20Help">ymcastore@toppromotions.com</a></p>
-                </div>
-            </div>
-            <div class="TopxsFooter visible-xs">
-                <div class="xsFootLeft">
-                    <img src="images/YMCA-area-focus-white-75.png" alt="For Youth Development. For Healthy Living. For Social Responsibilty." width="100%" />
-                </div>
-                <div class="xsFootRight">
-                    <p>Contact Us</p>
-                    <p><i class="fa fa-phone"></i>   1-877-742-5686</p>
-                    <p><i class="fa fa-envelope"></i>   <a href="mailto:ymcastore@toppromotions.com?subject=YMCA%20Apparel%20Store%20Help">ymcastore@toppromotions.com</a></p>
-                </div>
-            </div>
-            <div class="TopxxsFooter visible-xxs">
-                <div class="xxsFootLeft">
-                    <img src="images/YMCA-area-focus-white-75.png" alt="For Youth Development. For Healthy Living. For Social Responsibilty." width="100%" />
-                </div>
-                <div class="xxsFootRight">
-                    <p>Contact Us</p>
-                    <p><i class="fa fa-phone"></i>   1-877-742-5686</p>
-                    <p><i class="fa fa-envelope"></i>   <a href="mailto:ymcastore@toppromotions.com?subject=YMCA%20Apparel%20Store%20Help">ymcastore@toppromotions.com</a></p>
-                </div>
-            </div>
-            <div class="socialFooter">
-                <section class="ng-scope">
-                    <div class="container text-white">
-                        <p>
-                            <a href="https://www.four51.com/Themes/Custom/cdde0792-3f36-497d-88eb-12c282cba5d2/YMCA/docs/YMCA_Catalog_2016_Page_14.pdf" target="_blank">Click here Team Sports customization templates.</a>
-                        </p>
-                        <p>
-                            <a href="https://www.four51.com/Themes/Custom/cdde0792-3f36-497d-88eb-12c282cba5d2/YMCA/docs/YMCA_Catalog_2016_Page_15.pdf" target="_blank">Click here Benefit Statement customization templates.</a>
-                        </p>
-                            <!-- <a class="vertIcon iconTrans iconTwitter" target="_blank" href=""><i class="fa fa-twitter-square fa-3x"></i></a> -->
-                            <!-- <a class="vertIcon iconTrans iconFacebook" target="_blank" href="https://www.facebook.com/Toppromotions"><i class="fa fa-facebook-square fa-3x"></i></a> -->
-                            <!-- <a class="vertIcon" target="_blank" href="https://plus.google.com/b/101151839970654395169/101151839970654395169"><i class="fa fa-google-plus-square fa-3x"></i></a> -->
-                            <!-- <a class="vertIcon iconTrans iconInstagram" target="_blank" href=""><i class="fa fa-instagram fa-3x"></i></a> -->
-                            <!-- <a class="vertIcon iconTrans iconLinkedIn" target="_blank" href="https://www.linkedin.com/company/top-promotions"><i class="fa fa-linkedin-square fa-3x "></i></a> -->
-                        <!-- </p> -->
-                    </div>
-                </section>
-            </div>
-        </footer>
-    </div>
+/* Jumbor Header Home Page*/
+.jumboHeaderText {
+    text-align: center;
+    /*vertical-align: middle;*/
+    padding-top: 20px;
+    color: #FFFFFF;
+    /*position: relative;
+    top: 50%;
+    transform: translateY(-50%);*/
+}
+.text-white {
+    color: #ffffff;
+}
+/* Navbar Icon */
+.NavbarIconContainer {
+    max-width: 100%;
+    height: auto;
+}
 
-    <!-- Add for Back to Top icon -->
-    <backtotop offsetbottom="30" offsetright="30" duration="200"></backtotop>
+/* Shopping Cart Circle */
+.shoppingCartNavBar li a i:first-of-type{
+    border-radius: 50%;
+    border: 1px solid #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: -10px;
+}
 
-    <!--<script type="text/javascript" src="//dl1d2m8ri9v3j.cloudfront.net/releases/1.2.4/tracker.js" data-customer="bfec7bded14d43a7ace2697594e1369d"></script>-->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js" data-group="cdn"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js" data-group="cdn"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-sanitize.min.js" data-group="cdn"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-cookies.min.js" data-group="cdn"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-animate.min.js" data-group="cdn"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-resource.min.js" data-group="cdn"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-route.min.js" data-group="cdn"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-touch.min.js" data-group="cdn"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-loader.min.js" data-group="cdn"></script>
-    <script src="//cdn.ckeditor.com/4.4.7/basic/ckeditor.js" data-group="cdn"></script>
+/* Category Title */
+.TPCategoryTitle {
+    color: #0B3648;
+    font-size: 10pt;
+    font-style: bold;
+    /* offset-x | offset-y | blur-radius | color */
+    /*text-shadow: 2px 2px 5px #000000;*/
+}
 
-    <script src="lib/store.js" data-group="resources"></script>
-    <script src="lib/angular_ui/ui-utils.min.js" data-group="resources"></script>
-    <script src="lib/angular_ui/ui-bootstrap-tpls-0.10.0.min.js" data-group="resources"></script>
-    <script src="lib/angular/plugins/headroom.min.js" data-group="resources"></script>
-    <script src="lib/angular/angular.headroom.min.js" data-group="resources"></script>
-    <script src="lib/angular/angular-ga-analytics.js" data-group="resources"></script>
-    <script src="lib/angular/plugins/Debouncer.js" data-group="resources"></script>
-    <script src="lib/angular/plugins/ngAutocomplete.js" data-group="resources"></script>
-    <script src="lib/oc/anonRouter.js" data-group="resources"></script>
-    <script src="lib/oc/ordercloud-specforms.js" data-group="resources"></script>
+/* Fixes row issues with Category List page */
+.panel-category-list ul li a h5 {
+    height: 50px;
+}
+/* Fixes row issues with Product List page */
+.panel-product-list ul li h3 {
+    font-size: 15px;
+}
+/* List Contact Us no bullets */
+.contactUsList h3 p ul li {
+    list-style-type: none;
+}
+/*Changes size of images on category page*/
+.thumbnail img {
+  max-height: 100px; /*must match smallest size of thumbnail image*/
+  max-width: 100%;
+  margin: 0 auto 15px;
+}
+/* This counters the spacing issue on the product list page with <a> links */
+.aLinkSpacingFix p a {
+    padding: 0em !important;
+    display: inline !important;
+    text-decoration: none;
+}
 
-    <script src="//maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+/* Search Bar */
+.customSearchBar {
+    float: right !important;
+    width: 65%;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
 
-    <script src="js/app.js" data-group="source"></script>
-    <script src="js/four51consts.js" data-group="source"></script>
-    <script src="js/451.js" data-group="source"></script>
-    <script src="js/filters.js" data-group="source"></script>
-    <script src="js/config.js" data-group="source"></script>
-    <script src="js/routing.js" data-group="source"></script>
+/*Gives items a list style*/
+.prod-desc-list-style ul {
+    list-style-type: circle;
+    margin-left:25px;
+}
+/*Footer CSS*/
+* {
+    margin: 0;
+}
+.flushFooter, .push {
+    height: 210px; /* .push must be the same height as .footer */
+}
+.TopWrapper {
+    min-height: 100%;
+    margin: 0 auto -210px; /* the bottom margin is the negative value of the footer's height */
+}
+.TopFooter {
+    font-size: 13pt;
+    margin-top: 0px;
+    clear: both;
+    background-color: #f47920;
+    height: 150px;
+    width: 100%;
+    bottom: 0;
+    padding: 25px 0px;
+}
+.TopFooter a {
+    color: #ffffff;
+}
+.TopFooter p {
+    color: #ffffff;
+}
+.TopxsFooter {
+    margin-top: 0px;
+    clear: both;
+    background-color: #f47920;
+    height: 150px;
+    bottom: 0;
+    padding: 25px 0px;
+}
+.TopxsFooter a {
+    color: #ffffff;
+}
+.TopxsFooter p {
+    color: #ffffff;
+}
+.TopxxsFooter {
+    margin-top: 0px;
+    clear: both;
+    background-color: #f47920;
+    height: 150px;
+    bottom: 0;
+    padding: 25px 0px;
+}
+.TopxxsFooter a {
+    color: #ffffff;
+}
+.TopxxsFooter p {
+    color: #ffffff;
+}
+.footLeft {
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 12px;
+    margin-bottom: 0px;
+    padding-top: 0em;
+    padding-right: 3px;
+    padding-bottom: 0px;
+    padding-left: 55px;
+    float: left;
+}
+.xsFootLeft {
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    padding-top: 0em;
+    padding-right: 3px;
+    padding-bottom: 0px;
+    padding-left: 25px;
+    float: left;
+    width: 100%;
+    max-width: 225px;
+}
+.xxsFootLeft {
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top:25px;
+    margin-bottom: 0px;
+    padding-top: 0em;
+    padding-right: 3px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    float: left;
+    width: 100%;
+    max-width: 180px;
+}
+.footRight {
+    margin-right: 0em;
+    margin-left: 0em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 3px 25px 0px 0px;
+    float: right;
+}
+.xsFootRight {
+    margin-right: 0em;
+    margin-left: 0em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 50px 10px 0px 0px;
+    float: right;
+    font-size: 2vw;
+}
+.xxsFootRight {
+    margin-right: 0em;
+    margin-left: 0em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 20px 10px 0px 0px;
+    float: right;
+    font-size: 1.8vw;
+}
+.text-left {
+    padding: 10px 0px 0px 25px;
+}
+.leftFooterText {
+    font-size: 35pt !important;
+    font-style: oblique !important;
+    color: #ffffff !important;
+}
+.socialFooter {
+    margin-top: 0px;
+    clear: both;
+    background-color: #dd5828;
+    height: 80px;
+    width: 100%;
+    bottom: 0;
+    padding: 10px 25px 0px 0px;
+}
+/* Use this to transition icons */
+.iconTrans,
+.iconTrans:hover,
+.iconTrans:focus {
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -ms-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+.socialFooter > .text-right > .iconTrans {
+    color: #F7F7F7; /*E04F4F*/
+}
+.socialFooter > .text-right > .iconTwitter:hover {
+    color: #00ACED !important; /* 2B2B2B */
+}
+.socialFooter > .text-right > .iconFacebook:hover {
+    color: #3B5998 !important; /* 2B2B2B */
+}
+.socialFooter > .text-right > .iconInstagram:hover {
+    color: #517fA4 !important; /* 2B2B2B */
+}
+.socialFooter > .text-right > .iconLinkedIn:hover {
+    color: #007BB6 !important; /* 2B2B2B */
+}
+.vertIcon {
+    padding-left: 5px;
+}
 
-    <script src="js/controllers/Four51Ctrl.js" data-group="source"></script>
-    <script src="js/controllers/categoryCtrl.js" data-group="source"></script>
-    <script src="js/controllers/errorCtrl.js" data-group="source"></script>
-    <script src="js/controllers/loginCtrl.js" data-group="source"></script>
-    <script src="js/controllers/orderSearchCtrl.js" data-group="source"></script>
-    <script src="js/controllers/orderHistoryViewCtrl.js" data-group="source"></script>
-    <script src="js/controllers/lineItemHistoryCtrl.js" data-group="source"></script>
-    <script src="js/controllers/navCtrl.js" data-group="source"></script>
-    <script src="js/controllers/productCtrl.js" data-group="source"></script>
-    <script src="js/controllers/productListCtrl.js" data-group="source"></script>
-    <script src="js/controllers/messageListCtrl.js" data-group="source"></script>
-    <script src="js/controllers/messageViewCtrl.js" data-group="source"></script>
-    <script src="js/controllers/favoriteOrderCtrl.js" data-group="source"></script>
-    <script src="js/controllers/userEditCtrl.js" data-group="source"></script>
-    <script src="js/controllers/giftCardRedemptionCtrl.js" data-group="source"></script>
-    <script src="js/controllers/addressInputCtrl.js" data-group="source"></script>
-    <script src="js/controllers/addressListCtrl.js" data-group="source"></script>
-    <script src="js/controllers/addressViewCtrl.js" data-group="source"></script>
-    <script src="js/controllers/cartCtrl.js" data-group="source"></script>
-    <script src="js/controllers/checkOutViewCtrl.js" data-group="source"></script>
-    <script src="js/controllers/approvalInputCtrl.js" data-group="source"></script>
-    <script src="js/controllers/specFormCtrl.js" data-group="source"></script>
-    <script src="js/controllers/conditionsCtrl.js" data-group="source"></script>
-    <script src="js/controllers/reportsCtrl.js" data-group="source"></script>
-    <script src="js/controllers/reportCtrl.js" data-group="source"></script>
-    <script src="js/controllers/productSearchCtrl.js" data-group="source"></script>
-    <script src="js/controllers/lineItemEditCtrl.js" data-group="source"></script>
-    <script src="js/controllers/relatedProductsCtrl.js" data-group="source"></script>
-    <script src="js/controllers/shortProductViewCtrl.js" data-group="source"></script>
-    <script src="js/controllers/securityCtrl.js" data-group="source"></script>
-    <script src="js/controllers/orderTypeSelectorCtrl.js" data-group="source"></script>
-    <script src="js/controllers/reportViewCtrl.js" data-group="source"></script>
-    <script src="js/controllers/kitCtrl.js" data-group="source"></script>
+/* Theme CSS Edits */
+.container .navbar-nav li.active a:hover {
+  background-color: #01a490; /*#A8AB00*/
+}
+.container .navbar-nav li.active a:focus {
+  background-color: #01a490; /*#A8AB00*/;
+}
+.navbar-default .navbar-nav .open > a {
+  background-color: #01a490; /*#A8AB00*/
+}
+.navbar-default .navbar-nav .open > a:hover {
+  background-color: #01a490; /*#A8AB00*/
+}
+.navbar-default .navbar-nav .open > a:focus {
+  background-color: #01a490; /*#A8AB00*/
+}
+.navbar-nav li.dropdown li > a:hover {
+  background-color: #01a490; /*#A8AB00*/
+}
+.navbar-nav li.dropdown li > a:focus {
+  background-color: #01a490; /*#A8AB00*/
+}
+.navbar .container .navbar-nav li.active .fa-caret-down {
+  color: #01a490; /*#A8AB00*/
+}
+.navbar-nav li.dropdown li > a {
+  color: #333333;
+}
+.navbar-nav li.dropdown li > a:hover {
+  color: #FFFFFF;
+}
+.navbar .container .navbar-nav.pull-right li a i:first-of-type {
+  border-color: #FFFFFF;
+}
+.badge {
+  background-color: undefined;
+}
+/* Change Shopping Cart Indicator Number Color */
+.badge {
+  color: #FFFFFF;
+}
+.navbar-default {
+  background-color: #006b6b; /*0B3648*/
+}
+.container .navbar-nav li a {
+  color: #FFFFFF;
+}
+.container .navbar-nav li.active > a {
+  background-color: #01a490; /*#A8AB00*/
+}
+.container .navbar-nav li.active > a {
+  color: undefined;
+}
+.navbar-default, .dropdown-mega {
+  border-color: ;
+}
+body {
+  background-color: #F7F7F7;
+}
+body {
+  color: #333333;
+}
+.text-primary {
+  color: #000000;
+}
+.text-info {
+  color: #31708F;
+}
+body a {
+  color: #ed1c24;
+}
+.btn-primary {
+  background-color: #0B3648;
+}
+.btn-primary, .btn-primary:hover {
+  color: #FFFFFF;
+}
+.btn-primary {
+  border-color: #081B24;
+}
+.btn-primary:hover {
+  background-color: #051118;
+}
+.btn-default {
+  background-color: #FFFFFF;
+}
+.btn-default, .btn-default:hover {
+  color: #333333;
+}
+.btn-default {
+  border-color: #CCCCCC;
+}
+.btn-default:hover {
+  background-color: #EBEBEB;
+}
+.btn-info {
+  background-color: #5BC0DE;
+}
+.btn-info, .btn-info:hover {
+  color: #FFFFFF;
+}
+.btn-info {
+  border-color: #46B8DA;
+}
+.btn-info:hover {
+  background-color: #39B3D7;
+}
+.btn-success {
+  background-color: #636466;
+}
+.btn-success, .btn-success:hover {
+  color: #FFFFFF;
+}
+.btn-success {
+  border-color: #636466;
+}
+.btn-success:hover {
+  background-color: #0060af;
+}
+.btn-warning {
+  background-color: #f0ad4e;
+}
+.btn-warning, .btn-warning:hover {
+  color: #FFFFFF;
+}
+.btn-warning {
+  border-color: #EEA236;
+}
+.btn-warning:hover {
+  background-color: #ED9C28;
+}
+.btn-danger {
+  background-color: #E04F4F; /*D9534F*/
+}
+.btn-danger, .btn-danger:hover {
+  color: #FFFFFF;
+}
+.btn-danger {
+  border-color: #D43F3A;
+}
+.btn-danger:hover {
+  background-color: #D2322D;
+}
+.jumbotron {
+    border-radius: 25px; /* add for rounded borders $ak */
+    margin: 45px 10px -45px;
+    display: none;
+    background-color: #fcaf17;
+}
+h2 .jumbotron {
+  color: #FFFFFF;
+}
+.panel-default {}
 
-    <script src="js/interceptors.js" data-group="source"></script>
-    <script src="js/services/errorService.js" data-group="source"></script>
-    <script src="js/services/securityService.js" data-group="source"></script>
-    <script src="js/services/userService.js" data-group="source"></script>
-    <script src="js/services/productDisplayService.js" data-group="source"></script>
-    <script src="js/services/orderService.js" data-group="source"></script>
-    <script src="js/services/orderConfigService.js" data-group="source"></script>
-    <script src="js/services/orderSearchService.js" data-group="source"></script>
-    <script src="js/services/orderStatsService.js" data-group="source"></script>
-    <script src="js/services/productService.js" data-group="source"></script>
-    <script src="js/services/variantService.js" data-group="source"></script>
-    <script src="js/services/categoryService.js" data-group="source"></script>
-    <script src="js/services/messageService.js" data-group="source"></script>
-    <script src="js/services/messageListService.js" data-group="source"></script>
-    <script src="js/services/favoriteOrderService.js" data-group="source"></script>
-    <script src="js/services/accountsService.js" data-group="source"></script>
-    <script src="js/services/addressService.js" data-group="source"></script>
-    <script src="js/services/addressListService.js" data-group="source"></script>
-    <script src="js/services/shipperService.js" data-group="source"></script>
-    <script src="js/services/couponService.js" data-group="source"></script>
-    <script src="js/services/giftCardService.js" data-group="source"></script>
-    <script src="js/services/savedCreditCardService.js" data-group="source"></script>
-    <script src="js/services/resourceService.js" data-group="source"></script>
-    <script src="js/services/reportsService.js" data-group="source"></script>
-    <script src="js/services/googleAnalytics.js" data-group="source"></script>
-    <script src="js/services/navService.js" data-group="source"></script>
-    <script src="js/services/whiteLabelService.js" data-group="source"></script>
-    <script src="js/services/XLATTables.js" data-group="source"></script>
-    <script src="js/services/XLATService.js" data-group="source"></script>
-    <script src="js/services/kitService.js" data-group="source"></script>
-
-    <script src="js/factories/fileReader.js" data-group="source"></script>
-
-    <script src="js/directives/match.js" data-group="source"></script>
-    <script src="js/directives/buttonredirect.js" data-group="source"></script>
-    <script src="js/directives/product.js" data-group="source"></script>
-    <script src="js/directives/quantityfield.js" data-group="source"></script>
-    <script src="js/directives/paymentselection.js" data-group="source"></script>
-    <script src="js/directives/customtextfield.js" data-group="source"></script>
-    <script src="js/directives/customselectionfield.js" data-group="source"></script>
-    <script src="js/directives/customcheckboxfield.js" data-group="source"></script>
-    <script src="js/directives/customdatefield.js" data-group="source"></script>
-    <script src="js/directives/customtimefield.js" data-group="source"></script>
-    <script src="js/directives/customphonefield.js" data-group="source"></script>
-    <script src="js/directives/customfilefield.js" data-group="source"></script>
-    <script src="js/directives/approvalrulelist.js" data-group="source"></script>
-    <script src="js/directives/tree.js" data-group="source"></script>
-    <script src="js/directives/addressinput.js" data-group="source"></script>
-    <script src="js/directives/reporting.js" data-group="source"></script>
-    <script src="js/directives/inlineerror.js" data-group="source"></script>
-    <script src="js/directives/nav.js" data-group="source"></script>
-    <script src="js/directives/branding.js" data-group="source"></script>
-    <script src="js/directives/login.js" data-group="source"></script>
-    <script src="js/directives/approval.js" data-group="source"></script>
-    <script src="js/directives/shortCartView.js" data-group="source"></script>
-    <script src="js/directives/loadingindicator.js" data-group="source"></script>
-    <script src="js/directives/alertShow.js" data-group="source"></script>
-    <script src="js/directives/giftcard.js" data-group="source"></script>
-    <script src="js/directives/copyright.js" data-group="source"></script>
-    <script src="js/directives/ordersummary.js" data-group="source"></script>
-    <script src="js/directives/orderdetails.js" data-group="source"></script>
-    <script src="js/directives/ordershipping.js" data-group="source"></script>
-    <script src="js/directives/orderbilling.js" data-group="source"></script>
-    <script src="js/directives/orderapprovals.js" data-group="source"></script>
-    <script src="js/directives/daterange.js" data-group="source"></script>
-    <script src="js/directives/printing.js" data-group="source"></script>
-    <script src="js/directives/addToOrderSpecs.js" data-group="source"></script>
-    <script src="js/directives/imageonload.js" data-group="source"></script>
-    <script src="js/directives/ordertypeselector.js" data-group="source"></script>
-    <script src="js/directives/creditcard.js" data-group="source"></script>
-    <script src="js/directives/neworder.js" data-group="source"></script>
-    <script src="js/directives/orderbuttons.js" data-group="source"></script>
-
-    <!-- Custom Solutions-->
-    <script src="lib/oc/productMatrix.js" data-group="resources"></script>
-    <script src="lib/oc/categoryCollapse.js" data-group="resources"></script>
-    <script src="lib/oc/ProductSearchInput.js" data-group="resources"></script>
-    <script src="lib/oc/contentModal.js" data-group="resources"></script>
-    <script src="lib/oc/carousel.js" data-group="resources"></script>
-    <script src="lib/oc/addToCartPreview.js" data-group="resources"></script>
-    <script src="lib/oc/productZoom.js" data-group="resources"></script>
-    <script src="lib/oc/productLightbox.js" data-group="resources"></script>
-    <script src="lib/oc/backToTop.js" data-group="resources"></script>
-</body>
-<!-- <![endif]-->
-</html>
+.panel-primary .panel-heading .panel-title {
+    background-color: #a92b31; /*002A45*/
+}
+.panel-primary .panel-heading .panel-title {
+    color: #FFFFFF;
+}
+.panel-default .panel-heading .panel-title {
+    background-color: #cdcdcd;
+}
+.panel-default .panel-heading .panel-title {
+    color: #333333;
+}
+.panel-heading {
+    border-radius: 25px 25px 0px 0px; /* add for rounded borders $ak */
+}
+.panel-title {
+    border-radius: 25px 25px 0px 0px; /* add for rounded borders $ak */
+}
+.panel {
+    border-radius: 25px; /* add for rounded borders $ak */
+    background-color: #FFFFFF;
+}
+.panel-footer {
+  background-color: #F5F5F5;
+}
+.address-list-view .panel {
+    border-radius: 25px 25px 0px 0px; /* add for rounded borders $ak */
+}
+.ng-pristine .panel {
+    border-radius: 25px 25px 0px 0px; /* add for rounded borders $ak */
+}
+.roundBorders {
+    border-radius: 25px 25px 0px 0px; /* add for rounded borders $ak */
+}
+.order-search-view .panel {
+    border-radius: 25px; /* add for rounded borders $ak */
+}
+.panel-category-list .well {
+  background-color: #FFFFFF;
+}
+.panel-category-list .well h5 {
+  color: #333333;
+}
+.panel-category-list .well {
+  border-color: #F7F7F7;
+}
