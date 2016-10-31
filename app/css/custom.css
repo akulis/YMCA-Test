@@ -47,7 +47,12 @@
 .contactUsList h3 p ul li {
     list-style-type: none;
 }
-
+/*Changes size of images on category page*/
+.thumbnail img {
+  max-height: 100px; /*must match smallest size of thumbnail image*/
+  max-width: 100%;
+  margin: 0 auto 15px;
+}
 /* This counters the spacing issue on the product list page with <a> links */
 .aLinkSpacingFix p a {
     padding: 0em !important;
@@ -186,6 +191,9 @@
     padding: 20px 10px 0px 0px;
     float: right;
     font-size: 1.8vw;
+}
+.leftBottomFooter {
+    padding: 0px 0px 0px 50px;
 }
 .socialFooter {
     margin-top: 0px;
@@ -424,24 +432,4 @@ h2 .jumbotron {
 }
 .panel-category-list .well {
   border-color: #F7F7F7;
-}
-
-/* Adjust product list border/backgrounds $ak */
-.panel-product-list {
-    border-radius: 0px;
-    border-color: transparent;
-}
-.panel-product-list .well {
-  background-color: transparent;
-}
-.panel-product-list .aLinkSpacingFix {
-  color: #333333;
-}
-.panel-product-list .well {
-  border-color: transparent;
-}/*Changes size of images on category page*/
-.thumbnail img {
-  max-height: 100px; /*must match smallest size of thumbnail image*/
-  max-width: 100%;
-  margin: 0 auto 15px;
 }
