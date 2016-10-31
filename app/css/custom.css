@@ -196,9 +196,9 @@
     padding: 10px 0px 0px 25px;
 }
 .leftFooterText {
-    font-size: 35pt;
-    font-style: oblique;
-    color: #ffffff;
+    font-size: 35pt !important;    
+    font-style: oblique !important;
+    color: #ffffff !important;
 }
 .socialFooter {
     margin-top: 0px;
