@@ -196,6 +196,10 @@
     font-size: 35pt;
     padding: 0px 0px 0px 50px;
 }
+.leftFooterText {
+    font-size: 35pt;
+    color: #ffffff;
+}
 .socialFooter {
     margin-top: 0px;
     clear: both;
