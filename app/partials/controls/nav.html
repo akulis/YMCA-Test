@@ -128,6 +128,21 @@
                             </li>
                         </ul>
                     </li>
+                    <!-- Templates Links -->
+                    <!-- If Anonymous User -->
+                    <li class="templates" ng-hide="user.Type == 'Customer'" ng-class="{'active': isActive('templates')}">
+                        <a id="451qa_mesg_link" href="templates">
+                            <i class="fa fa-file-pdf-o"></i>
+                            <span class="hidden-xs">{{'Templates' | r | xlat}}</span>
+                        </a>
+                    </li>
+                    <!-- If Logged In -->
+                    <li class="templates" ng-show="user.Type == 'Customer'" ng-class="{'active': isActive('templates')}">
+                        <a id="451qa_mesg_link" href="templates">
+                            <i class="fa fa-info-file-pdf-o"></i>
+                            <span class="hidden-xs">{{'Templates' | r | xlat}}</span>
+                        </a>
+                    </li>
 
                     <!-- Contact Us Links -->
                     <!-- If Anonymous User -->
@@ -139,9 +154,9 @@
                     </li>
                     <!-- If Logged In -->
                     <li class="contactus" ng-if="user.Permissions.contains('ViewContactUs')" ng-show="user.Type == 'Customer'" ng-class="{'active': isActive('contactus')}">
-                        <a id="451qa_mesg_link" class="hidden-xs hidden-sm" href="contactus">
+                        <a id="451qa_mesg_link" href="contactus">
                             <i class="fa fa-info-circle"></i>
-                            {{'Contact Us' | r | xlat}}
+                            <span class="hidden-xs">{{'Contact Us' | r | xlat}}</span>
                         </a>
                     </li>
                 </ul>
