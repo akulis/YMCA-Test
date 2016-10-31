@@ -195,10 +195,14 @@
 .text-left {
     padding: 10px 0px 0px 25px;
 }
-.leftFooterText {
+.leftFooterTextyy {
     font-size: 35pt !important;
     font-style: oblique !important;
     color: #ffffff !important;
+}
+.leftFooterText {
+    padding-left: 5px;
+    color: #ffffff;
 }
 .socialFooter {
     margin-top: 0px;
