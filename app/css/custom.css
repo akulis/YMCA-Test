@@ -192,12 +192,12 @@
     float: right;
     font-size: 1.8vw;
 }
-.leftBottomFooter {
-    font-size: 35pt;
-    padding: 0px 0px 0px 50px;
+.text-left {
+    padding: 10px 0px 0px 25px;
 }
 .leftFooterText {
     font-size: 35pt;
+    font-style: oblique;
     color: #ffffff;
 }
 .socialFooter {
