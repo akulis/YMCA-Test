@@ -205,17 +205,17 @@
 .socialFooter a {
     color: #ffffff;
 }
-.TopFooter2 p {
+.socialFooter p {
     color: #ffffff;
 }
 .socialFooter {
     margin-top: 0px;
     clear: both;
     background-color: #dd5828;
-    height: 60px;
+    height: 80px;
     width: 100%;
     bottom: 0;
-    padding: 10px 25px 0px 0px;
+    padding: 10px 25px 0px 55px;
 }
 /* Use this to transition icons */
 .iconTrans,
