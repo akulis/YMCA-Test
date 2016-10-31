@@ -192,30 +192,22 @@
     float: right;
     font-size: 1.8vw;
 }
-.TopFooter2 {
-    font-size: 10pt;
+.text-left {
+    padding: 10px 0px 0px 25px;
+}
+.leftFooterText {
+    font-size: 35pt !important;    
+    font-style: oblique !important;
+    color: #ffffff !important;
+}
+.socialFooter {
     margin-top: 0px;
     clear: both;
     background-color: #dd5828;
     height: 60px;
     width: 100%;
     bottom: 0;
-    padding: 10px 0px;
-}
-.socialFooter a {
-    color: #ffffff;
-}
-.socialFooter p {
-    color: #ffffff;
-}
-.socialFooter {
-    margin-top: 0px;
-    clear: both;
-    background-color: #dd5828;
-    height: 80px;
-    width: 100%;
-    bottom: 0;
-    padding: 10px 25px 0px 55px;
+    padding: 10px 25px 0px 0px;
 }
 /* Use this to transition icons */
 .iconTrans,
