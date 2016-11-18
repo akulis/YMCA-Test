@@ -18,14 +18,14 @@
     <!-- Running Purchase Power Disclaimer -->
     <br />
     <!-- <div class="panel panel-primary" ng-show="currentCategory.Name('AmeriCorps')" > -->
-    <div class="panel panel-primary" ng-show="currentCategory.Name == 'Print to Order'" ng-show="currentCategory.Name == 'RP - Running Purchase Power'">
+    <div class="panel panel-primary" ng-show="(currentCategory.Name === 'Print to Order' || ng-show=currentCategory.Name === 'RP - Running Purchase Power')">
 		<div class="panel-heading">
 		  <h2 class="panel-title panel-primary">
 		    {{'DISCLAIMER' | r | xlat}}
 		  </h2>
 		</div>
 		<div class="panel-body">
-		  <h4 class="NSGcenter"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>  These items are not held in stock, orders are produced twice a month.  Orders are collected on the 1st and 3rd Thursday of each month (respective of holidays) and are shipped 15 business days later (respective of holidays)</h4>
+		  <h4 class="NSGcenter"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>  These items are not held in stock, orders are produced twice a month.  Orders are collected on the 1st and 3rd Thursday of each month (respective of holidays) and are shipped 15 business days later (respective of holidays).</h4>
 		</div>
 	</div>
     <br />
