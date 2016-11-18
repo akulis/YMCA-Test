@@ -432,6 +432,10 @@ h2 .jumbotron {
 }
 
 /* Adjust product list border/backgrounds $ak */
+.panel-product-list {
+    border-radius: 0px;
+    border-color: transparent;
+}
 /*.panel-product-list {
     border-radius: 0px;
     border-color: transparent;
