@@ -436,6 +436,10 @@ h2 .jumbotron {
     border-radius: 0px;
     border-color: transparent;
 }
+.panel .panel-heading {
+  /* border-top: 2px solid #ffffff; */ /* Removed $ak */
+  padding: 0;
+}
 /*.panel-product-list {
     border-radius: 0px;
     border-color: transparent;
