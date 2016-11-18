@@ -6579,7 +6579,7 @@ button::-moz-focus-inner {
   margin-top: 0;
 }
 .panel .panel-heading {
-  border-top: 2px solid #ffffff;
+  /* border-top: 2px solid #ffffff; */
   padding: 0;
 }
 .panel .panel-heading .panel-title {
