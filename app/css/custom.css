@@ -377,7 +377,7 @@ body a {
     border-radius: 25px; /* add for rounded borders $ak */
     margin: 45px 10px -45px;
     display: none;
-    /*background-color: #fcaf17;*/
+    background-color: #f7f7f7;
 }
 h2 .jumbotron {
   color: #FFFFFF;
