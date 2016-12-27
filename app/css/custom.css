@@ -212,7 +212,7 @@
   transition: all ease-in-out 0.5s;
 }
 .socialFooter > .text-right > .iconTrans {
-    color: #F7F7F7; /*E04F4F*/
+    color: #ffffff; /*E04F4F*/
 }
 .socialFooter > .text-right > .iconTwitter:hover {
     color: #00ACED !important; /* 2B2B2B */
@@ -287,7 +287,7 @@
   border-color: ;
 }
 body {
-  background-color: #F7F7F7;
+  background-color: #ffffff;
 }
 body {
   color: #333333;
@@ -377,7 +377,7 @@ body a {
     border-radius: 25px; /* add for rounded borders $ak */
     margin: 45px 10px -45px;
     display: none;
-    background-color: #f7f7f7;
+    background-color: #ffffff;
 }
 h2 .jumbotron {
   color: #FFFFFF;
@@ -428,7 +428,7 @@ h2 .jumbotron {
   color: #333333;
 }
 .panel-category-list .well {
-  border-color: #F7F7F7;
+  border-color: #ffffff;
 }
 
 /* Adjust product list border/backgrounds $ak */
