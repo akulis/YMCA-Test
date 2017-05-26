@@ -16,6 +16,17 @@
     max-width: 100%;
     height: auto;
 }
+/* Spending Account Nav Option */
+.spendingaccounts {
+  padding: 15px 8px;
+  color: #ffffff;
+  font-size: 75%;
+}
+.spendingaccounts-xs {
+  padding: 18px 0px 0px 0px;
+  color: #ffffff;
+  font-size: 1.7vmin;
+}
 /* Fixed Product Image */
 .fixedProductImage {
   position: fixed !important;
