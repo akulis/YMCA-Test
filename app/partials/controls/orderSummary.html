@@ -1,4 +1,4 @@
-<div class="panel panel-primary roundBorders">
+<div class="panel panel-primary">
     <div class="panel-heading">
         <h3 class="panel-title panel-primary">
             {{('Checkout' | r) + ' ' + ('Summary' | r) | xlat}}
@@ -24,8 +24,6 @@
             <span class="text-info">{{'Tax' | r | xlat}}</span>
             <span class="pull-right">{{currentOrder.TaxCost || 0 | culturecurrency}}</span>
         </p>
-        <!-- Insert Gift Card redemption code here -->
-        <giftcardredemption ng-if="user.Permissions.contains('ViewPromotions')" />
         <div ng-show="user.Permissions.contains('ViewPromotions')">
             <div ng-show="!currentOrder.Coupon">
                 <div class="form-group view-form-icon">
