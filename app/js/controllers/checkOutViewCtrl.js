@@ -134,4 +134,5 @@ function ($scope, $routeParams, $location, $filter, $rootScope, $451, User, Orde
 	$scope.cancelEdit = function() {
 		$location.path('order');
 	};
+	$scope.items = [{name: 'Ground' },{ name: 'Rush' }]
 }]);

@@ -78,3 +78,13 @@ four51.app.filter('paginate', function() {
 		return input.slice(start);
 	}
 });
+
+//For changing USPS shipping option in dropdown
+four51.app.filter('USPSFilter',function() {
+    debugger;
+    return function(object) {
+        if (object) {
+            return object.replace(/USPS Priority Mail 2-Day™/g, 'US Postal Ground');
+        }
+    }
+});
