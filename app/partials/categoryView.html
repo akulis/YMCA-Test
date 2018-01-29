@@ -38,22 +38,6 @@
   </div>
   <br/>
   <!-- End Togetherhood Disclaimer -->
-  <!-- Limited Time Special Disclaimer -->
-  <br/>
-  <div class="panel panel-primary" ng-show="(currentCategory.Name === 'Limited Time Special')">
-    <div class="panel-heading">
-      <h2 class="panel-title panel-primary">
-        {{'Limited Time Special Ordering Schedule' | r | xlat}}
-      </h2>
-    </div>
-    <div class="panel-body">
-      <h4 class="NSGcenter">
-        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-        Orders received from February 2nd through February 23rd, 2018, will ship the week of March 26th, 2018.</h4>
-    </div>
-  </div>
-  <br/>
-  <!-- End Limited Time Special Disclaimer -->
   <!-- Running Purchase Power Disclaimer -->
   <!-- <br /> <div class="panel panel-primary" ng-show="(currentCategory.Name === 'RP - Running Purchase Power' || currentCategory.Name === 'RPY-Polos' || currentCategory.Name === 'RPY-Tees' || currentCategory.Name === 'RPY-Outerwear' ||
   currentCategory.Name === 'RPY-Twills')"> <div class="panel-heading"> <h2 class="panel-title panel-primary"> {{'***This program is ending 12/21/17***' | r | xlat}} </h2> </div> <div class="panel-body"> <h4 class="NSGcenter"><i class="fa
@@ -111,7 +95,7 @@
     </aside>
     <div ng-class="{ 'col-md-9': navStatus.visible, 'col-md-12': !navStatus.visible }">
       <categorylistview></categorylistview>
-      <loadingindicator ng-show="productLoadingIndicator" title="{{'Please wait while we fetch all products' | r | xlat}}"/>
+      <loadingindicator ng-show="productLoadingIndicator" title="{{'Please wait while we fetch all products' | r | xlat}}" />
       <productlistview></productlistview>
     </div>
   </div>
