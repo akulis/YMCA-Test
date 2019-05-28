@@ -1,5 +1,5 @@
-four51.app.controller('ProductCtrl', ['$scope', '$routeParams', '$route', '$location', '$451', 'Product', 'ProductDisplayService', 'Order', 'Variant', 'User',
-function ($scope, $routeParams, $route, $location, $451, Product, ProductDisplayService, Order, Variant, User) {
+four51.app.controller('ProductCtrl', ['$scope', '$routeParams', '$route', '$location', '$451', 'Product', 'ProductDisplayService', 'Order', 'Variant', 'User', 'CustomErrors',
+function ($scope, $routeParams, $route, $location, $451, Product, ProductDisplayService, Order, Variant, User, CustomErrors) {
     $scope.isEditforApproval = $routeParams.orderID && $scope.user.Permissions.contains('EditApprovalOrder');
     if ($scope.isEditforApproval) {
         Order.get($routeParams.orderID, function(order) {
@@ -72,7 +72,7 @@ function ($scope, $routeParams, $route, $location, $451, Product, ProductDisplay
 		);
 	}
 
-	$scope.addToOrder = function(){
+	var _addToOrder = function(){
 		if($scope.lineItemErrors && $scope.lineItemErrors.length){
 			$scope.showAddToCartErrors = true;
 			return;
@@ -115,6 +115,70 @@ function ($scope, $routeParams, $route, $location, $451, Product, ProductDisplay
 					//$route.reload();
 				}
 		);
+	};
+
+	$scope.addToOrder = function(){
+		var cppMessage = CustomErrors.cppMessage;
+		var hdkMessage = CustomErrors.hdkMessage;
+		var normalCPPMessage = CustomErrors.normalCPPMessage;
+		var normalHDKMessage = CustomErrors.normalHDKMessage;
+
+		if($scope.currentOrder){
+			var groupFound = "";
+			var thisGroup = "";
+			angular.forEach($scope.currentOrder.LineItems, function(line){
+				if(line.Product.StaticSpecGroups && line.Product.StaticSpecGroups.ProductGroup){
+					groupFound = line.Product.StaticSpecGroups.ProductGroup.Specs.Group.Value.toUpperCase();
+				}
+			});
+			if($scope.LineItem.Product.StaticSpecGroups && $scope.LineItem.Product.StaticSpecGroups.ProductGroup){
+				//Attempting to add a grouped item to an existing order
+				thisGroup = $scope.LineItem.Product.StaticSpecGroups.ProductGroup.Specs.Group.Value.toUpperCase();
+				if(groupFound !== ""){
+					//Attempting to add a grouped item to an order containing a grouped item.
+					if(groupFound === thisGroup){
+						//Groups match.  Add to order.
+						_addToOrder();
+					}
+					else{
+						if(thisGroup === "HKD"){
+							alert(hdkMessage);
+						}
+						else{
+							alert(cppMessage);
+						}
+					}
+				}
+				else{
+					//Attempting to add a grouped item to a normal order.
+					if(thisGroup === "HKD"){
+						alert(hdkMessage);
+					}
+					else{
+						alert(cppMessage);
+					}
+				}
+			}
+			else{
+				if(groupFound !== ""){
+					//Attempting to add a normal item to an order containing a grouped item.
+					if(groupFound === "HKD"){
+						alert(normalHDKMessage);
+					}
+					else{
+						alert(normalCPPMessage);
+					}
+				}
+				else{
+					//Attempting to add a normal item to a normal order.
+					_addToOrder();
+				}
+			}
+		}
+		else{
+			//Adding first item to an order, no validation needed.
+			_addToOrder();
+		}
 	};
 
 	$scope.setOrderType = function(type) {

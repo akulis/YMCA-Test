@@ -3,14 +3,12 @@
         <section>
             <div class="container">
                 <ul class="nav navbar-nav pull-left">
-
                     <!-- Left Arrow/Back Icon -->
                     <li class="back animated fadeInLeft" ng-class="{'ng-hide': isActive('catalog')}">
                         <a href back-step class="back">
                             <i class="fa fa-arrow-left"></i>
                         </a>
                     </li>
-
                     <!-- Navbar Menu Icon -->
                     <li id="" class="back animated fadeInLeft hidden-xs">
                         <a id="451qa_home_link" class="" style="padding: 15px 10px 0px 10px; text-align: center;" href="catalog" ng-show="Four51User.isAuthenticated()">
@@ -22,7 +20,6 @@
                             <img class="image-responsive navLogo NavbarIconContainer" ng-src="images/ymca-white-30.png" src="ymca-white-30.png">
                         </a>
                     </li>
-
                     <!-- Programs Button -->
                     <li class="products" ng-class="{'active': isInPath('catalog') || isInPath('product') || isInPath('cart/default') || isInPath('search')}">
                         <a id="451qa_home_link" ng-show="Four51User.isAuthenticated()" href="catalog">
@@ -33,7 +30,6 @@
                     <li class="hidden-xs hidden-sm">
                         <productsearchinputnav></productsearchinputnav>
                     </li>
-
                     <!-- Orders Button -->
                     <li class="order" ng-if="user.Type == 'Customer'" ng-class="{'active': isActive('order'), 'active-xs': isActive('favoriteorders')}">
                         <a id="451qa_order_link" href="order">
@@ -41,7 +37,6 @@
                             <span class="hidden-xs">{{'Orders' | r | xlat}}</span>
                         </a>
                     </li>
-
                     <!-- Reports Button -->
                     <li class="report" ng-if="user.Type == 'Customer' && user.Permissions.contains('AdvancedReporting')" ng-class="{'active': isActive('reports')}">
                         <a id="451qa_order_link" href="reports">
@@ -49,7 +44,6 @@
                             <span class="hidden-xs hidden-sm">{{'Reports' | r | xlat}}</span>
                         </a>
                     </li>
-
                     <!-- Login/Account Buttons - No Dropdown-->
                     <!-- If Anonymous User -->
                     <li ng-class="{'active': isActive(['admin', 'addresses', 'address', 'messages', 'message', 'favoriteorders'])}">
@@ -63,7 +57,6 @@
                             <span class="hidden-xs hidden-sm">{{'Account' | r | xlat}}</span>
                         </a>
                     </li>
-
                     <!-- Login/Account Buttons - Dropdown -->
                     <li class="dropdown admin-user visible-md visible-lg" ng-class="{'active': isActive(['admin', 'addresses', 'address', 'messages', 'message', 'favoriteorders'])}">
                         <!-- If Anonymous User -->
@@ -116,8 +109,8 @@
                                     {{"Start" | r | xlat}} {{"New" | r | xlat}} {{"Order" | r | xlat}}
                                 </a>
                             </li>
-                            <li class="divider" ng-show="user.Type!='TempCustomer' || AppConst.debug"></li>
-                            <li ng-show="user.Type!='TempCustomer'" class="logout">
+                            <li class="divider" ng-show="(user.Type!='TempCustomer' && !PunchoutUser) || AppConst.debug"></li>
+                            <li ng-show="user.Type!='TempCustomer' && !PunchoutUser" class="logout">
                                 <a href="#"  class="451_btn_logout" ng-click="Logout()">
                                     <i class="fa fa-power-off text-danger"></i>
                                     <span>{{'Log Out' | r | xlat}}</span>
@@ -146,7 +139,6 @@
                             <span class="hidden-xs hidden-sm">{{'Custom Options' | r | xlat}}</span>
                         </a>
                     </li>
-
                     <!-- Contact Us Links -->
                     <!-- If Anonymous User -->
                     <li class="contactus" ng-if="user.Permissions.contains('ViewContactUs')" ng-hide="user.Type == 'Customer'" ng-class="{'active': isActive('contactus')}">
@@ -185,7 +177,6 @@
                 <ul class="pull-right">
                     <minicart></minicart>
                 </ul>
-
                 <!-- Social Icons -->
                 <!-- <span class="hidden-xs hidden-sm">
                     <ul class="nav navbar-nav pull-right">
