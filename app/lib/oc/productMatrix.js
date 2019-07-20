@@ -183,8 +183,10 @@ function ProductMatrixCtrl($scope, $routeParams, $location, ProductDisplayServic
     } else {
       var cppMessage = CustomErrors.cppMessage;
       var hkdMessage = CustomErrors.hkdMessage;
+      var halMessage = CustomErrors.halMessage;
       var normalCPPMessage = CustomErrors.normalCPPMessage;
       var normalHKDMessage = CustomErrors.normalHKDMessage;
+      var normalHALMessage = CustomErrors.normalHALMessage;
 
       if ($scope.currentOrder) {
         var groupFound = "";
@@ -205,6 +207,8 @@ function ProductMatrixCtrl($scope, $routeParams, $location, ProductDisplayServic
             } else {
               if (thisGroup === "HKD") {
                 alert(hkdMessage);
+              } else if (thisGroup === "HAL") {
+                alert(halMessage);
               } else {
                 alert(cppMessage);
               }
@@ -213,6 +217,8 @@ function ProductMatrixCtrl($scope, $routeParams, $location, ProductDisplayServic
             //Attempting to add a grouped item to a normal order.
             if (thisGroup === "HKD") {
               alert(hkdMessage);
+            } else if (thisGroup === "HAL") {
+              alert(halMessage);
             } else {
               alert(cppMessage);
             }
@@ -222,6 +228,8 @@ function ProductMatrixCtrl($scope, $routeParams, $location, ProductDisplayServic
             //Attempting to add a normal item to an order containing a grouped item.
             if (groupFound === "HKD") {
               alert(normalHKDMessage);
+            } else if (groupFound === "HAL") {
+              alert(normalHALMessage);
             } else {
               alert(normalCPPMessage);
             }
