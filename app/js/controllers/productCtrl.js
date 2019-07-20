@@ -121,9 +121,9 @@ four51.app.controller('ProductCtrl', ['$scope', '$routeParams', '$route', '$loca
 
     $scope.addToOrder = function() {
       var cppMessage = CustomErrors.cppMessage;
-      var hdkMessage = CustomErrors.hdkMessage;
+      var hkdMessage = CustomErrors.hkdMessage;
       var normalCPPMessage = CustomErrors.normalCPPMessage;
-      var normalHDKMessage = CustomErrors.normalHDKMessage;
+      var normalHKDMessage = CustomErrors.normalHKDMessage;
 
       if ($scope.currentOrder) {
         var groupFound = "";
@@ -143,7 +143,7 @@ four51.app.controller('ProductCtrl', ['$scope', '$routeParams', '$route', '$loca
               _addToOrder();
             } else {
               if (thisGroup === "HKD") {
-                alert(hdkMessage);
+                alert(hkdMessage);
               } else {
                 alert(cppMessage);
               }
@@ -151,7 +151,7 @@ four51.app.controller('ProductCtrl', ['$scope', '$routeParams', '$route', '$loca
           } else {
             //Attempting to add a grouped item to a normal order.
             if (thisGroup === "HKD") {
-              alert(hdkMessage);
+              alert(hkdMessage);
             } else {
               alert(cppMessage);
             }
@@ -160,7 +160,7 @@ four51.app.controller('ProductCtrl', ['$scope', '$routeParams', '$route', '$loca
           if (groupFound !== "") {
             //Attempting to add a normal item to an order containing a grouped item.
             if (groupFound === "HKD") {
-              alert(normalHDKMessage);
+              alert(normalHKDMessage);
             } else {
               alert(normalCPPMessage);
             }
