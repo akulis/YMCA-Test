@@ -182,9 +182,9 @@ function ProductMatrixCtrl($scope, $routeParams, $location, ProductDisplayServic
       //do nothing - error messaging is shown via validateQuantity
     } else {
       var cppMessage = CustomErrors.cppMessage;
-      var hdkMessage = CustomErrors.hdkMessage;
+      var hkdMessage = CustomErrors.hkdMessage;
       var normalCPPMessage = CustomErrors.normalCPPMessage;
-      var normalHDKMessage = CustomErrors.normalHDKMessage;
+      var normalHKDMessage = CustomErrors.normalHKDMessage;
 
       if ($scope.currentOrder) {
         var groupFound = "";
@@ -204,7 +204,7 @@ function ProductMatrixCtrl($scope, $routeParams, $location, ProductDisplayServic
               _addVariantsToOrder();
             } else {
               if (thisGroup === "HKD") {
-                alert(hdkMessage);
+                alert(hkdMessage);
               } else {
                 alert(cppMessage);
               }
@@ -212,7 +212,7 @@ function ProductMatrixCtrl($scope, $routeParams, $location, ProductDisplayServic
           } else {
             //Attempting to add a grouped item to a normal order.
             if (thisGroup === "HKD") {
-              alert(hdkMessage);
+              alert(hkdMessage);
             } else {
               alert(cppMessage);
             }
@@ -220,8 +220,8 @@ function ProductMatrixCtrl($scope, $routeParams, $location, ProductDisplayServic
         } else {
           if (groupFound !== "") {
             //Attempting to add a normal item to an order containing a grouped item.
-            if (groupFound === "HDK") {
-              alert(normalHDKMessage);
+            if (groupFound === "HKD") {
+              alert(normalHKDMessage);
             } else {
               alert(normalCPPMessage);
             }
