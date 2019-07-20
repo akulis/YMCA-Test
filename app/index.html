@@ -3,15 +3,19 @@
 
 <head>
   <!--baseTagToken-->
-<!--headscriptToken-->
-  <style id="antiClickjack">body{display:none !important;}</style>
+  <!--headscriptToken-->
+  <style id="antiClickjack">
+    body {
+      display: none !important;
+    }
+  </style>
   <script type="text/javascript">
-      if (self === top) {
-          var antiClickjack = document.getElementById("antiClickjack");
-          antiClickjack.parentNode.removeChild(antiClickjack);
-      } else {
-          top.location = self.location;
-      }
+    if (self === top) {
+      var antiClickjack = document.getElementById("antiClickjack");
+      antiClickjack.parentNode.removeChild(antiClickjack);
+    } else {
+      top.location = self.location;
+    }
   </script>
   <!-- Set Window/Tab title here -->
   <title>YMCA Apparel Store</title>
