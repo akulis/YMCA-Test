@@ -48,6 +48,27 @@
   max-width: 100%;
 }
 
+/* Check Out Buttons */
+.checkoutShopButton {
+  font-size: 1.8vmax;
+  text-transform: uppercase;
+}
+
+.checkoutCancelButton {
+  font-size: 1.8vmax;
+  text-transform: uppercase;
+}
+
+.checkoutSaveButton {
+  font-size: 1.5vmax;
+  text-transform: uppercase;
+}
+
+.checkoutCheckOutButton {
+  font-size: 1.5vmax;
+  text-transform: uppercase;
+}
+
 /* Shopping Cart Circle */
 .shoppingCartNavBar li a i:first-of-type {
   border-radius: 50%;
