@@ -108,6 +108,11 @@
   list-style-type: none;
 }
 
+/* Custom Option Page text bullets */
+.pageBullets ul li {
+  list-style-type: disc;
+}
+
 /*Changes size of images on category page*/
 .thumbnail img {
   max-height: 100px;
