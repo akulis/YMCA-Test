@@ -87,7 +87,7 @@ four51.app.filter('USPSFilter', function() {
   debugger;
   return function(object) {
     if (object) {
-      return object.replace(/USPS Priority Mail 2-Day™/g, 'USPS Ground');
+      return object.replace(/USPS Priority Mail®/g, 'USPS Ground');
     }
   }
 });
