@@ -97,7 +97,7 @@ function minicart() {
             '                <div class="col-xs-6">',
             '                    <a class="btn btn-default btn-block" href="cart">View Cart</a>',
             '                </div>',
-            '                <div class="col-xs-6">',
+            '                <div class="col-xs-6" ng-show="!user.Permissions.contains(\'PunchoutUser\')">',
             '                    <a class="btn btn-default btn-block" ng-click="cartCheckOut()">Checkout</a>',
             '                </div>',
             '            </div>',
